@@ -11,7 +11,7 @@ sudo rm -f /usr/share/raspi-ui-overrides/applications/python-games.desktop
 sudo rm -rf ~/python_games
 
 # change the host name
-sudo sh -c "sed \"s/raspberrypi/${hostname}-pi/\" </etc/hosts >/etc/hosts"
+sudo sed -i.bak "s/raspberrypi/${hostname}-pi/" /etc/hosts
 
 # change the timezone
 sudo sh -c "echo Etc/GMT > /etc/timezone"
